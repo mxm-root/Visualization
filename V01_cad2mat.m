@@ -7,7 +7,7 @@
 %==========================================================================
 clc; clear all; close all
 
-filename = 'cube_STL.stl'; %example STL-file
+filename = 'V01_example_STL.stl'; %example STL-file
 flagshow = 1; % 0 or 1
 flagsave = 0; % 0 or 1
 
@@ -46,7 +46,7 @@ f = reshape(face_list, 3,form_num);
 F = f'; V = v';  C = c';
 
 if flagsave == 1
-    save ('cube_MAT.mat', 'F', 'V', 'C')
+    save ('V01_example_MAT.mat', 'F', 'V', 'C')
 end
 
 if flagshow == 1

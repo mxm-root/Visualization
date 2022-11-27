@@ -58,4 +58,8 @@ if flagshow == 1
     %set(p, 'EdgeColor','none'); 
     view(60,30);
     axis([-5 25 -25 5 -5 25]);
+    for i = 1:360
+        view(i,30);
+        drawnow()
+    end
 end

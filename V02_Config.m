@@ -74,7 +74,7 @@ fill3([ax3(1) ax3(1) ax3(2)], [ay3(1) ay3(2) ay3(3)],[az3(1) az3(1) az3(1)], [1 
 alpha(.15)
 
 % text labels
-plot3(thr(1,:),thr(2,:),thr(3,:),'or',LineWidth=3)
+plot3(thr(1,:),thr(2,:),thr(3,:),'or','LineWidth',3)
 text(thr(1,1),thr(2,1),thr(3,1)+0.05,'1 - first'); 
 text(thr(1,2),thr(2,2),thr(3,2)+0.05,'2 - second'); 
 text(thr(1,3),thr(2,3),thr(3,3)+0.05,'3 - third'); 
@@ -86,7 +86,7 @@ text(thr(1,7),thr(2,7),thr(3,6)+0.05,'7 - seventh');
 % set(gca, 'Zdir', 'reverse')
 
 % axes of the coordinate system
-plot3([0 max(p1(1,:))], [0 0], [0 0],LineWidth=2)
-plot3([0 0], [0 max(p1(2,:))], [0 0],LineWidth=2)
-plot3([0 0], [0 0], [0 max(p1(3,:))],LineWidth=2)
+plot3([0 max(p1(1,:))], [0 0], [0 0],'LineWidth',2)
+plot3([0 0], [0 max(p1(2,:))], [0 0],'LineWidth',2)
+plot3([0 0], [0 0], [0 max(p1(3,:))],'LineWidth',2)
 view(12.72,22.0504); %[caz,cel]=view()

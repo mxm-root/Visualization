@@ -73,6 +73,18 @@ xlabel('x');ylabel('y');zlabel('z');
 fill3([ax3(1) ax3(1) ax3(2)], [ay3(1) ay3(2) ay3(3)],[az3(1) az3(1) az3(1)], [1 0 0]);
 alpha(.15)
 
+% arrow3-function, see: https://de.mathworks.com/matlabcentral/fileexchange/14056-arrow3
+% author: Tom Davis
+Lp=0.4; % allow length
+Alpha=zeros(1,7); Beta=zeros(1,7);
+arrow3([thr(1,1) thr(2,1) thr(3,1)],[thr(1,1)-Lp thr(2,1)-Lp*tan(Alpha(1,1)) thr(3,1)],'v*/',1.5,3)
+arrow3([thr(1,2) thr(2,2) thr(3,2)],[thr(1,2)-Lp thr(2,2)-Lp*tan(Alpha(1,2)) thr(3,2)],'v*/',1.5,3)
+arrow3([thr(1,3) thr(2,3) thr(3,3)],[thr(1,3)-Lp thr(2,3)-Lp*tan(Alpha(1,3)) thr(3,3)],'v*/',1.5,3)
+arrow3([thr(1,4) thr(2,4) thr(3,4)],[thr(1,4)-Lp thr(2,4)-Lp*tan(Alpha(1,4)) thr(3,4)],'v*/',1.5,3)
+arrow3([thr(1,5) thr(2,5) thr(3,5)],[thr(1,5)-Lp thr(2,5)-Lp*tan(Alpha(1,5)) thr(3,5)],'v*/',1.5,3)
+arrow3([thr(1,6) thr(2,6) thr(3,6)],[thr(1,6)-Lp thr(2,6)-Lp*tan(Alpha(1,6)) thr(3,6)],'v*/',1.5,3)
+arrow3([thr(1,7) thr(2,7) thr(3,7)],[thr(1,7)-Lp thr(2,7)-Lp*tan(Alpha(1,7)) thr(3,7)],'v*/',1.5,3)
+
 % text labels
 plot3(thr(1,:),thr(2,:),thr(3,:),'or','LineWidth',3)
 text(thr(1,1),thr(2,1),thr(3,1)+0.05,'1 - first'); 
@@ -85,8 +97,8 @@ text(thr(1,7),thr(2,7),thr(3,6)+0.05,'7 - seventh');
 % set(gca, 'Ydir', 'reverse')
 % set(gca, 'Zdir', 'reverse')
 
-% axes of the coordinate system
-plot3([0 max(p1(1,:))], [0 0], [0 0],'LineWidth',2)
-plot3([0 0], [0 max(p1(2,:))], [0 0],'LineWidth',2)
-plot3([0 0], [0 0], [0 max(p1(3,:))],'LineWidth',2)
 view(12.72,22.0504); %[caz,cel]=view()
+% axes of the coordinate system
+arrow3([0 0 0],[max(p1(1,:)) 0 0],'k*/',1.5,3)
+arrow3([0 0 0],[0 max(p1(2,:)) 0],'k*/',1.5,3)
+arrow3([0 0 0],[0 0 max(p1(3,:))],'k*/',1.5,3)
